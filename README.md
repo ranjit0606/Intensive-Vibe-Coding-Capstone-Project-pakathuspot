@@ -1,7 +1,5 @@
 # 🧭 PakathuSpot: Multi-Agent AI Travel Companion
 
-![PakathuSpot Project Thumbnail](file:///Users/ranjit/.gemini/antigravity-ide/brain/7e024b68-b562-4e27-81e7-0a7154ab1817/project_thumbnail_1782110811636.png)
-
 PakathuSpot is a modern, premium, multi-agent AI travel planner designed to curate personalized travel itineraries, calculate precise budgets, and analyze live weather reports. It operates on a smart orchestration architecture that utilizes specialized local agents for tool execution and consolidates results in a **single LLM request** with auto-fallback between the **Google Gemini API** and a **local Ollama instance (Qwen2.5:3b)**.
 
 ---
@@ -25,20 +23,12 @@ It is designed to be highly responsive, resilient to API rate limits, and ready 
 - **🗺️ Interactive Map View:** Displays locations on an interactive **Leaflet.js Map** matching coordinates directly.
 - **⚡ Glassmorphic Dark UI:** Built with a premium, sleek dark-mode user interface using Vite, React, TailwindCSS, and Lucide Icons.
 
----
-## 📖 Project Journey
-
-PakathuSpot started as a simple travel recommendation system. Initially, each agent independently called Gemini, which quickly resulted in API quota limitations and unnecessary costs.
-
-To solve this, the architecture was redesigned around a Coordinator Agent that orchestrates specialized sub-agents and consolidates all outputs into a single LLM call. Later, Ollama integration was added to provide local fallback when Gemini quotas are exhausted.
-
-The final result is a scalable multi-agent travel planning platform capable of operating both online and offline while maintaining a smooth user experience.
+### Architecture Diagram
+![Architecture](screenshots/architecture.png)
 
 ## 🤖 Multi-Agent Architecture Diagram
 
 Here is the visual architecture diagram representing the orchestration flow of a request in PakathuSpot:
-
-![PakathuSpot Architecture Diagram](file:///Users/ranjit/.gemini/antigravity-ide/brain/7e024b68-b562-4e27-81e7-0a7154ab1817/architecture_landscape_1782135916552.png)
 
 ### Detail Flow Graph
 
@@ -83,18 +73,6 @@ graph TD
 ```
 
 ---
-## 🤔 Why Agents?
-
-Travel planning involves multiple independent tasks:
-
-- Finding attractions
-- Checking weather
-- Estimating budgets
-- Creating itineraries
-
-Instead of using a single large prompt, PakathuSpot delegates each task to a specialized agent. This improves modularity, maintainability, and allows each component to evolve independently.
-
-The Coordinator Agent combines these outputs into a unified travel plan.
 
 ## 🤖 Google Agent Development Kit (ADK) Integration
 
@@ -213,7 +191,8 @@ Compatible Clients:
 
 Here is the visual summary of the technology stack powering PakathuSpot:
 
-![PakathuSpot Tech Stack](file:///Users/ranjit/.gemini/antigravity-ide/brain/7e024b68-b562-4e27-81e7-0a7154ab1817/tech_stack_640x360_1782135541620.png)
+### Technology Stack
+![Tech Stack](screenshots/techstack.png)
 
 | Component | Technology | Description |
 | :--- | :--- | :--- |
@@ -238,18 +217,6 @@ PakathuSpot follows agentic design principles :
 - Fallback reasoning using Gemini and Ollama
 
 Instead of one large model performing all work, specialized agents solve individual tasks and the Coordinator Agent combines their results into a final travel plan.
-
-## ✅ Capstone Requirements Mapping
-
-| Requirement | Implementation |
-|------------|----------------|
-| Agent / Multi-Agent System | Coordinator Agent + Place, Weather, Budget, Itinerary Agents |
-| ADK | google.adk.Agent declarations |
-| MCP Server | tools/mcp_server.py |
-| Agent Skills | recommendation_skill, budget_skill, itinerary_skill, advice_skill |
-| Antigravity | Task decomposition, orchestration, delegation |
-| Security | Environment variables, API key masking, Pydantic validation |
-| Deployability | FastAPI + React deployment instructions |
 
 ## ⚙️ Installation Guide
 
@@ -394,17 +361,29 @@ To simplify production hosting, you can package both frontend and backend to run
 
 ## 📸 Screenshots Section
 
-*Add your app screenshots here to showcase the beautiful Glassmorphic Dark UI dashboard!*
+### Home Page
+![Home Page](screenshots/homepage.png)
 
----
+### Weather Analysis
+![Weather](screenshots/weather.png)
 
-## 📄 License
+### Budget Planning
+![Budget](screenshots/budget.png)
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+### Itinerary Generation
+![Itinerary](screenshots/iternaery.png)
 
----
+### Attractions Recommendations
+![Attractions](screenshots/Rename.png)
+
+### Architecture Diagram
+![Architecture](screenshots/architecture.png)
+
+### Technology Stack
+![Tech Stack](screenshots/techstack.png)
+
 
 ## ✍️ Author Section
 
-Created and maintained by **Ranjit** (freestyle capstone track). 
+Created and maintained by **Ranjitkumar** (freestyle capstone track). 
 Feel free to connect or contribute! 🚀
