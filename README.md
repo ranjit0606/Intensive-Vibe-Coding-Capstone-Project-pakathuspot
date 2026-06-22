@@ -212,7 +212,7 @@ pakathuspot/
 | Security | Environment variables, API key masking, Pydantic validation |
 | Deployability | FastAPI + React deployment instructions |
 
-##MCP Integration
+## 🔌 MCP Integration
 PakathuSpot exposes travel tools through a FastMCP server.
 
 Available MCP Tools:
