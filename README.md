@@ -20,6 +20,25 @@ It is designed to be highly responsive, resilient to API rate limits, and ready 
 Track: Freestyle
 
 PakathuSpot is submitted under the Freestyle track as a multi-agent AI travel planning platform that combines ADK agents, MCP tools, Gemini, Ollama fallback, and modern web technologies.
+
+## 🚨 Problem Statement
+
+Travel planning is often fragmented across multiple platforms. Travelers need to search for attractions, check weather forecasts, estimate budgets, compare transportation options, and manually create itineraries.
+
+This process is time-consuming, repetitive, and difficult to personalize. Users frequently switch between maps, weather websites, travel blogs, and budgeting tools before finalizing a trip.
+
+A unified intelligent system that can automate these tasks and generate a complete travel plan would significantly improve the travel planning experience.
+
+## 💡 Solution
+
+PakathuSpot is a Multi-Agent AI Travel Companion that automates the entire travel planning workflow.
+
+The system uses specialized AI agents responsible for different tasks such as attraction discovery, weather analysis, budget estimation, and itinerary generation. A Coordinator Agent orchestrates these agents and combines their outputs into a single personalized travel plan.
+
+The platform integrates live weather data, mapping tools, budget calculations, and AI-generated recommendations while supporting both cloud-based Gemini models and local Ollama models for resilience and offline capability.
+
+The result is a fast, intelligent, and user-friendly travel planning experience.
+
 ## 📖 Project Journey
 
 PakathuSpot started as a simple travel recommendation system. Initially, each agent independently called Gemini, which quickly resulted in API quota limitations and unnecessary costs.
