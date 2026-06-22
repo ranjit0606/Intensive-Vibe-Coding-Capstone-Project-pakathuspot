@@ -26,6 +26,13 @@ It is designed to be highly responsive, resilient to API rate limits, and ready 
 - **⚡ Glassmorphic Dark UI:** Built with a premium, sleek dark-mode user interface using Vite, React, TailwindCSS, and Lucide Icons.
 
 ---
+## 📖 Project Journey
+
+PakathuSpot started as a simple travel recommendation system. Initially, each agent independently called Gemini, which quickly resulted in API quota limitations and unnecessary costs.
+
+To solve this, the architecture was redesigned around a Coordinator Agent that orchestrates specialized sub-agents and consolidates all outputs into a single LLM call. Later, Ollama integration was added to provide local fallback when Gemini quotas are exhausted.
+
+The final result is a scalable multi-agent travel planning platform capable of operating both online and offline while maintaining a smooth user experience.
 
 ## 🤖 Multi-Agent Architecture Diagram
 
@@ -76,6 +83,18 @@ graph TD
 ```
 
 ---
+## 🤔 Why Agents?
+
+Travel planning involves multiple independent tasks:
+
+- Finding attractions
+- Checking weather
+- Estimating budgets
+- Creating itineraries
+
+Instead of using a single large prompt, PakathuSpot delegates each task to a specialized agent. This improves modularity, maintainability, and allows each component to evolve independently.
+
+The Coordinator Agent combines these outputs into a unified travel plan.
 
 ## 🤖 Google Agent Development Kit (ADK) Integration
 
@@ -219,6 +238,18 @@ PakathuSpot follows agentic design principles :
 - Fallback reasoning using Gemini and Ollama
 
 Instead of one large model performing all work, specialized agents solve individual tasks and the Coordinator Agent combines their results into a final travel plan.
+
+## ✅ Capstone Requirements Mapping
+
+| Requirement | Implementation |
+|------------|----------------|
+| Agent / Multi-Agent System | Coordinator Agent + Place, Weather, Budget, Itinerary Agents |
+| ADK | google.adk.Agent declarations |
+| MCP Server | tools/mcp_server.py |
+| Agent Skills | recommendation_skill, budget_skill, itinerary_skill, advice_skill |
+| Antigravity | Task decomposition, orchestration, delegation |
+| Security | Environment variables, API key masking, Pydantic validation |
+| Deployability | FastAPI + React deployment instructions |
 
 ## ⚙️ Installation Guide
 
