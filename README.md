@@ -1,3 +1,7 @@
+## 🔗 Repository
+
+GitHub Repository:
+https://github.com/ranjit0606/Intensive-Vibe-Coding-Capstone-Project-pakathuspot
 # 🧭 PakathuSpot: Multi-Agent AI Travel Companion
 
 PakathuSpot is a modern, premium, multi-agent AI travel planner designed to curate personalized travel itineraries, calculate precise budgets, and analyze live weather reports. It operates on a smart orchestration architecture that utilizes specialized local agents for tool execution and consolidates results in a **single LLM request** with auto-fallback between the **Google Gemini API** and a **local Ollama instance (Qwen2.5:3b)**.
@@ -11,6 +15,11 @@ Planning trips often requires hopping between weather channels, maps, budgeting 
 It is designed to be highly responsive, resilient to API rate limits, and ready to serve both online via Gemini and offline via Ollama.
 
 ---
+## 🏆 Kaggle Capstone Track
+
+Track: Freestyle
+
+PakathuSpot is submitted under the Freestyle track as a multi-agent AI travel planning platform that combines ADK agents, MCP tools, Gemini, Ollama fallback, and modern web technologies.
 ## 📖 Project Journey
 
 PakathuSpot started as a simple travel recommendation system. Initially, each agent independently called Gemini, which quickly resulted in API quota limitations and unnecessary costs.
@@ -412,6 +421,9 @@ To simplify production hosting, you can package both frontend and backend to run
 ### Technology Stack
 ![Tech Stack](screenshots/techstack.png)
 
+## 🎯 Conclusion
+
+PakathuSpot demonstrates how a coordinated multi-agent system can simplify travel planning by combining destination discovery, weather analysis, budget estimation, and itinerary generation into a single intelligent workflow. By leveraging ADK-inspired agents, MCP tools, Gemini, and Ollama fallback, the platform provides a practical and deployable AI-powered travel companion.
 
 ## ✍️ Author Section
 
